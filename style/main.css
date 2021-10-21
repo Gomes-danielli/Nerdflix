@@ -1,0 +1,146 @@
+:root {
+    --lima: #3aff29;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--lima);
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    width: 50px;
+    height: 50px;
+    animation: go-back 1s infinite alternate;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+
+/*Filme capa*/
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('../img/Ljustica.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    margin-top: 15px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aqua;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s ease all;
+    transition: transform 1s;
+    transform: translateX(0.1) scale(0.5);
+}
+
+.botao a {
+    text-decoration: none;
+    color: white;
+}
+
+.botao:hover,
+.botao:focus {
+    background-color: blue;
+    color: red;
+    transform: translateX(5px) scale(1.2);
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 60%;
+}
+
+.box-filme {
+    height: 80%;
+    width: 80%;
+    display: block;
+    cursor: pointer;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+.item {
+    border-style: double;
+    border-width: 10px;
+    border-top-color: orangered;
+    border-right-color: lime;
+    border-left-color: red;
+    border-bottom-color: green;
+}
+
+.item:hover,
+.item:focus {
+    transform: rotate(10deg);
+}
+
+
+/*animação do título*/
+
+@keyframes go-back {
+    from {
+        transform: translateX(100px);
+        color: #3aff29;
+    }
+    to {
+        transform: translateX(0);
+        color: red;
+    }
+}
